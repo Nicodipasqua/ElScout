@@ -59,6 +59,9 @@ if not df_actual.empty:
     st.sidebar.metric("Notas Totales", len(df_actual))
     
     # Opción para descargar una copia limpia
+
+streamlit
+pandas
     csv_data = df_actual.to_csv(index=False).encode('utf-8')
     st.sidebar.download_button("📥 Descargar Copia .CSV", data=csv_data, file_name="reporte_final.csv")
 else:
